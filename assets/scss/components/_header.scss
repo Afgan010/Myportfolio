@@ -1,0 +1,104 @@
+@use "../variables" as *;
+
+#header {
+  background-color: $purewhite;
+  padding: 13px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+
+  .container {
+    .row {
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .navBar {
+        .navList {
+          display: flex;
+          gap: 40px;
+          .listItem {
+            a {
+              line-height: 22px;
+              font-weight: 500;
+              padding: 8px 12px;
+              border-radius: 12px;
+              color: $secondaryColor;
+              &:hover {
+                color: $grey;
+                background-color: $secondaryColor;
+              }
+            }
+          }
+        }
+      }
+      .mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #header {
+    padding: 13px 0;
+    z-index: 9999;
+    .container {
+      position: relative;
+      .row {
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+          width: 36px;
+          height: 36px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .navBar {
+          display: none;
+        }
+        .mobile {
+          display: block;
+          .mobileIcon {
+            .closeIcon {
+              display: none;
+              width: 24px;
+              height: 24px;
+            }
+          }
+          .mobileNavList {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            flex-direction: column;
+            gap: 40px;
+
+            .mobileListItem {
+              a {
+                line-height: 22px;
+                font-weight: 500;
+                padding: 8px 12px;
+                border-radius: 12px;
+                color: $secondaryColor;
+                &:hover {
+                  color: $grey;
+                  background-color: $secondaryColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
