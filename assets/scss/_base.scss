@@ -18,3 +18,9 @@
 .row {
   display: flex;
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+}
