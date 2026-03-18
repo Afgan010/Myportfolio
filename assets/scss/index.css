@@ -189,6 +189,10 @@ html {
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 40px 0;
+    margin: 10px 0;
+  }
   .hero .container .row {
     gap: 20px;
     flex-direction: column-reverse;
@@ -199,6 +203,7 @@ html {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 30px;
   }
   .hero .container .row .leftSide .greeting .myName {
@@ -378,4 +383,22 @@ html {
   #projects .container .row .projectCardContainer .projectCard:hover {
     transform: scale(1.02);
   }
+}
+#about .container .row {
+  flex-direction: column;
+  gap: 30px;
+}
+#about .container .row .title {
+  font-size: 36px;
+  color: #1a1a1a;
+  text-align: center;
+}
+#about .container .row .aboutContent {
+  display: flex;
+  gap: 30px;
+}
+#about .container .row .aboutContent .leftSide {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 30px);
 }/*# sourceMappingURL=index.css.map */

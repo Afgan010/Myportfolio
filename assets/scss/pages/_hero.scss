@@ -66,6 +66,8 @@
 
 @media (max-width: 768px) {
   .hero {
+    padding: 40px 0;
+    margin: 10px 0;
     .container {
       .row {
         gap: 20px;
@@ -76,6 +78,7 @@
           width: 100%;
           display: flex;
           flex-direction: column;
+          align-items: center;
           gap: 30px;
 
           .greeting {

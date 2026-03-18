@@ -6,6 +6,19 @@ const supabaseUrl = "https://comvweccwecmhxnqoryp.supabase.co";
 const supabaseKey = "sb_publishable_25xBBIn_9QGjLBjxIC-lLA_OhVGHggR";
 const supabaseClient = createClient(supabaseUrl, supabaseKey);
 const projectCard = document.querySelector(".projectCardContainer");
+const tech = document.querySelector(".skills");
+
+const SKILLS = [
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "TypeScript",
+  "React.js",
+  "Tailwind CSS",
+  "RESTful APIs",
+  "Git",
+  "Responsive Design",
+];
 
 burger.addEventListener("click", () => {
   burger.style.display = "none";
