@@ -72,4 +72,19 @@ const renderProjects = (project) => {
     .join("");
 };
 
+const getSkills = () => {
+  const fragment = document.createDocumentFragment();
+
+  SKILLS.forEach((item) => {
+    const span = document.createElement("span");
+    span.className = "skill";
+    span.textContent = item;
+    fragment.appendChild(span);
+  });
+
+  tech.appendChild(fragment);
+};
+
+getSkills();
+
 getData();
