@@ -27,6 +27,11 @@ html {
     width: 95%;
   }
 }
+@media (min-width: 769px) and (max-width: 1200px) {
+  .container {
+    width: 92%;
+  }
+}
 #header {
   background-color: #fff;
   padding: 13px 0;
@@ -231,6 +236,9 @@ html {
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
+  .hero {
+    padding: 30px 0;
+  }
   .hero .container {
     width: 92%;
   }
@@ -511,6 +519,145 @@ html {
     line-height: 40px;
   }
   #about .container .row .aboutContent .rightSide {
+    width: 100%;
+  }
+}
+#contact {
+  padding: 40px 0;
+}
+#contact .container .row {
+  flex-direction: column;
+  gap: 40px;
+}
+#contact .container .row .title {
+  text-align: center;
+  font-size: 36px;
+  color: #1a1a1a;
+}
+#contact .container .row #contactForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+}
+#contact .container .row #contactForm .top {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+#contact .container .row #contactForm .top .formGroup {
+  width: calc(50% - 15px);
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+#contact .container .row #contactForm .top .formGroup label {
+  color: #1a1a1a;
+  font-size: 20px;
+}
+#contact .container .row #contactForm .top .formGroup .inp {
+  border: 1px solid #5f5f5f;
+  border-radius: 16px;
+  outline: none;
+  padding: 8px 6px;
+}
+#contact .container .row #contactForm .top .formGroup .inp:focus {
+  outline: none;
+}
+#contact .container .row #contactForm .bottom {
+  width: 100%;
+}
+#contact .container .row #contactForm .bottom .formGroup {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+#contact .container .row #contactForm .bottom .formGroup label {
+  color: #1a1a1a;
+  font-size: 20px;
+}
+#contact .container .row #contactForm .bottom .formGroup .inp {
+  width: 100%;
+  border: 1px solid #5f5f5f;
+  border-radius: 16px;
+  outline: none;
+  padding: 8px 6px;
+  resize: vertical;
+}
+#contact .container .row #contactForm .bottom .formGroup .inp:focus {
+  outline: none;
+}
+#contact .container .row #contactForm .submit {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  background-color: #308ce8;
+}
+#contact .container .row #contactForm .submit:hover {
+  background-color: #1a1a1a;
+}
+#contact .container .row #contactForm .submit:active {
+  transform: scale(0.88);
+}
+
+@media (max-width: 768px) {
+  #contact {
+    padding: 20px 0;
+  }
+  #contact .container .row {
+    gap: 20px;
+  }
+  #contact .container .row .title {
+    font-size: 30px;
+  }
+  #contact .container .row #contactForm {
+    gap: 20px;
+    width: 100%;
+  }
+  #contact .container .row #contactForm .top {
+    gap: 15px;
+    flex-direction: column;
+  }
+  #contact .container .row #contactForm .top .formGroup {
+    width: 100%;
+  }
+  #contact .container .row #contactForm .top .formGroup label {
+    font-size: 16px;
+  }
+  #contact .container .row #contactForm .submit {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  #contact {
+    padding: 30px 0;
+  }
+  #contact .container .row {
+    gap: 30px;
+  }
+  #contact .container .row .title {
+    font-size: 30px;
+  }
+  #contact .container .row #contactForm {
+    gap: 20px;
+    width: 100%;
+  }
+  #contact .container .row #contactForm .top {
+    gap: 15px;
+    flex-direction: column;
+  }
+  #contact .container .row #contactForm .top .formGroup {
+    width: 100%;
+  }
+  #contact .container .row #contactForm .top .formGroup label {
+    font-size: 16px;
+  }
+  #contact .container .row #contactForm .submit {
     width: 100%;
   }
 }/*# sourceMappingURL=index.css.map */
