@@ -39,6 +39,9 @@
                 outline: none;
               }
             }
+            .error {
+              color: red;
+            }
           }
         }
         .bottom {
@@ -62,6 +65,9 @@
               &:focus {
                 outline: none;
               }
+            }
+            .error {
+              color: red;
             }
           }
         }

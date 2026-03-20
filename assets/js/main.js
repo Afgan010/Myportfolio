@@ -7,6 +7,7 @@ const supabaseKey = "sb_publishable_25xBBIn_9QGjLBjxIC-lLA_OhVGHggR";
 const supabaseClient = createClient(supabaseUrl, supabaseKey);
 const projectCard = document.querySelector(".projectCardContainer");
 const tech = document.querySelector(".skills");
+const form = document.querySelector("#contactForm");
 
 const SKILLS = [
   "HTML5",
@@ -84,6 +85,57 @@ const getSkills = () => {
 
   tech.appendChild(fragment);
 };
+
+const nameRegex = /^[A-Za-zƏəÖöÜüĞğŞşÇçİı' -]{2,50}$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const messageRegex = /^(?!\s*$).{10,1000}$/;
+
+function validateForm({ name, email, message }) {
+  const errors = {};
+
+  if (!nameRegex.test(name)) {
+    errors.name = "Please enter valid name";
+  }
+
+  if (!emailRegex.test(email)) {
+    errors.email = "Please enter valid email";
+  }
+
+  if (!messageRegex.test(message)) {
+    errors.message = "Message must be at least 10 characters";
+  }
+
+  return errors;
+}
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const message = form.message.value.trim();
+
+  const errors = validateForm({ name, email, message });
+
+  document.querySelectorAll(".error").forEach((el) => {
+    el.textContent = "";
+  });
+
+  if (errors.name) {
+    form.name.nextElementSibling.textContent = errors.name;
+  }
+
+  if (errors.email) {
+    form.email.nextElementSibling.textContent = errors.email;
+  }
+
+  if (errors.message) {
+    form.message.nextElementSibling.textContent = errors.message;
+  }
+  if (Object.keys(errors).length === 0) {
+    form.reset();
+  }
+});
 
 getSkills();
 

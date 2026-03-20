@@ -564,6 +564,9 @@ html {
 #contact .container .row #contactForm .top .formGroup .inp:focus {
   outline: none;
 }
+#contact .container .row #contactForm .top .formGroup .error {
+  color: red;
+}
 #contact .container .row #contactForm .bottom {
   width: 100%;
 }
@@ -587,6 +590,9 @@ html {
 }
 #contact .container .row #contactForm .bottom .formGroup .inp:focus {
   outline: none;
+}
+#contact .container .row #contactForm .bottom .formGroup .error {
+  color: red;
 }
 #contact .container .row #contactForm .submit {
   width: -moz-fit-content;
