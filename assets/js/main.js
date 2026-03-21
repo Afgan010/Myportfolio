@@ -8,6 +8,11 @@ const supabaseClient = createClient(supabaseUrl, supabaseKey);
 const projectCard = document.querySelector(".projectCardContainer");
 const tech = document.querySelector(".skills");
 const form = document.querySelector("#contactForm");
+const btn = document.querySelector(".submit");
+
+(function () {
+  emailjs.init("F_wfsgCLnFz9mwQLy");
+})();
 
 const SKILLS = [
   "HTML5",
@@ -121,20 +126,33 @@ form.addEventListener("submit", function (e) {
     el.textContent = "";
   });
 
-  if (errors.name) {
-    form.name.nextElementSibling.textContent = errors.name;
+  if (Object.keys(errors).length > 0) {
+    if (errors.name) form.name.nextElementSibling.textContent = errors.name;
+    if (errors.email) form.email.nextElementSibling.textContent = errors.email;
+    if (errors.message)
+      form.message.nextElementSibling.textContent = errors.message;
+
+    return;
   }
 
-  if (errors.email) {
-    form.email.nextElementSibling.textContent = errors.email;
-  }
+  btn.textContent = "Sending...";
+  btn.disabled = true;
 
-  if (errors.message) {
-    form.message.nextElementSibling.textContent = errors.message;
-  }
-  if (Object.keys(errors).length === 0) {
-    form.reset();
-  }
+  emailjs
+    .sendForm("service_issbp0c", "template_wlhsbz3", form)
+    .then(
+      () => {
+        alert("Success!");
+        form.reset();
+      },
+      (err) => {
+        alert("Failed: " + JSON.stringify(err));
+      },
+    )
+    .finally(() => {
+      btn.textContent = "Send Message";
+      btn.disabled = false;
+    });
 });
 
 getSkills();
