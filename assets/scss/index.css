@@ -129,6 +129,145 @@ html {
     width: 92%;
   }
 }
+#footer {
+  background-color: #fafafa;
+  padding: 40px 0;
+}
+#footer .container .row {
+  justify-content: space-between;
+  align-items: center;
+}
+#footer .container .row .leftSide {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+#footer .container .row .leftSide .logo {
+  width: 24px;
+  height: 24px;
+}
+#footer .container .row .leftSide .logo a {
+  width: 100%;
+  height: 100%;
+}
+#footer .container .row .leftSide .copyRight {
+  font-size: 18px;
+  color: #5f5f5f;
+}
+#footer .container .row .leftSide .social .socialList {
+  display: flex;
+  gap: 30px;
+}
+#footer .container .row .leftSide .social .socialList .socialItem {
+  width: 24px;
+  height: 24px;
+}
+#footer .container .row .leftSide .social .socialList .socialItem a {
+  width: 100%;
+  height: 100%;
+}
+#footer .container .row .navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#footer .container .row .navbar .title {
+  font-size: 22px;
+  color: #1a1a1a;
+}
+#footer .container .row .navbar .navList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#footer .container .row .navbar .navList .listItem {
+  text-align: center;
+}
+#footer .container .row .navbar .navList .listItem a {
+  padding: 6px 4px;
+  font-size: 18px;
+  color: #1a1a1a;
+  border-radius: 12px;
+}
+#footer .container .row .navbar .navList .listItem a:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+#footer .container .row .connections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#footer .container .row .connections .title {
+  font-size: 22px;
+  color: #1a1a1a;
+}
+#footer .container .row .connections .connectionList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#footer .container .row .connections .connectionList .listItem {
+  text-align: center;
+}
+#footer .container .row .connections .connectionList .listItem a {
+  padding: 6px 4px;
+  font-size: 18px;
+  color: #1a1a1a;
+  border-radius: 12px;
+}
+#footer .container .row .connections .connectionList .listItem a:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #footer {
+    padding: 20px 0;
+  }
+  #footer .container .row {
+    flex-direction: column;
+    gap: 30px;
+    align-items: start;
+  }
+  #footer .container .row .leftSide .logo {
+    width: 20px;
+    height: 20px;
+  }
+  #footer .container .row .leftSide .copyRight {
+    font-size: 16px;
+  }
+  #footer .container .row .leftSide .social .socialList {
+    gap: 20px;
+  }
+  #footer .container .row .leftSide .social .socialList .socialItem {
+    width: 20px;
+    height: 20px;
+  }
+  #footer .container .row .navbar .title {
+    font-size: 18px;
+  }
+  #footer .container .row .navbar .navList .listItem {
+    text-align: start;
+  }
+  #footer .container .row .connections {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #footer .container .row .connections .title {
+    font-size: 22px;
+    color: #1a1a1a;
+  }
+  #footer .container .row .connections .connectionList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  #footer .container .row .connections .connectionList .listItem {
+    text-align: start;
+  }
+}
 .hero {
   padding: 60px 0;
   margin: 30px 0;
