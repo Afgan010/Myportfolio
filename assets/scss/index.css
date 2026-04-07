@@ -92,6 +92,7 @@ html {
     display: none;
   }
   #header .container .row .mobile {
+    z-index: 9999;
     display: block;
   }
   #header .container .row .mobile .mobileIcon .closeIcon {
@@ -451,10 +452,11 @@ html {
   transform: scale(1.05);
 }
 #projects .container .row .projectCardContainer .projectCard .projectImage {
-  width: 350px;
-  height: 350px;
+  max-width: 350px;
+  max-height: 350px;
+  min-width: 200px;
+  min-height: 200px;
   border-radius: 12px;
-  overflow: hidden;
 }
 #projects .container .row .projectCardContainer .projectCard .projectImage img {
   width: 100%;

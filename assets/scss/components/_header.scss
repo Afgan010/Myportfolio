@@ -64,6 +64,7 @@
           display: none;
         }
         .mobile {
+          z-index: 9999;
           display: block;
           .mobileIcon {
             .closeIcon {

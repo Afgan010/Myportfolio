@@ -1,6 +1,7 @@
 const burger = document.querySelector(".menuIcon");
 const closeMenu = document.querySelector(".closeIcon");
 const navlist = document.querySelector(".mobileNavList");
+const mobile = document.querySelector(".mobile");
 const { createClient } = supabase;
 const supabaseUrl = "https://comvweccwecmhxnqoryp.supabase.co";
 const supabaseKey = "sb_publishable_25xBBIn_9QGjLBjxIC-lLA_OhVGHggR";
@@ -33,6 +34,12 @@ burger.addEventListener("click", () => {
 });
 
 closeMenu.addEventListener("click", () => {
+  burger.style.display = "block";
+  closeMenu.style.display = "none";
+  navlist.style.display = "none";
+});
+
+navlist.addEventListener("click", () => {
   burger.style.display = "block";
   closeMenu.style.display = "none";
   navlist.style.display = "none";
