@@ -33,16 +33,12 @@ burger.addEventListener("click", () => {
   navlist.style.display = "flex";
 });
 
-closeMenu.addEventListener("click", () => {
-  burger.style.display = "block";
-  closeMenu.style.display = "none";
-  navlist.style.display = "none";
-});
-
-navlist.addEventListener("click", () => {
-  burger.style.display = "block";
-  closeMenu.style.display = "none";
-  navlist.style.display = "none";
+[navlist, closeMenu].forEach((e) => {
+  e.addEventListener("click", () => {
+    burger.style.display = "block";
+    closeMenu.style.display = "none";
+    navlist.style.display = "none";
+  });
 });
 
 const getData = async () => {
