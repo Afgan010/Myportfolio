@@ -16,6 +16,7 @@
       }
       .projectCardContainer {
         display: flex;
+        flex-wrap: wrap;
         gap: 40px;
         width: 100%;
         .projectCard {
@@ -40,7 +41,7 @@
             img {
               width: 100%;
               height: 100%;
-              object-fit: cover;
+              object-fit: contain;
             }
           }
           .projectTitle {
