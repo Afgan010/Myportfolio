@@ -54,7 +54,7 @@ const getData = async () => {
 };
 
 const renderProjects = (project) => {
-  if (!project) {
+  if (!project || project.length === 0) {
     projectCard.innerHTML = "<p>No project yet </p>";
     return;
   }
